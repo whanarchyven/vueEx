@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Страница с постами</h1>
-    <my-input v-model="searchQuery" placeholder="Поиск по названию"></my-input>
+<!--    <my-input v-model="searchQuery" placeholder="Поиск по названию"></my-input>-->
     <div class="app_btns">
       <my-button @click="showDialog">Создать пост</my-button>
       <my-select v-model="selectedSort" :options="sortOptions"></my-select>
@@ -41,10 +41,9 @@ import ModalWindow from "@/components/UI/ModalWindow";
 import MyButton from "@/components/UI/MyButton";
 import axios from 'axios';
 import MySelect from "@/components/UI/MySelect";
-import MyInput from "@/components/UI/MyInput";
+//import MyInput from "@/components/UI/MyInput";
 export default {
   components:{
-    MyInput,
     MySelect,
     MyButton,
     ModalWindow,

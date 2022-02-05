@@ -1,9 +1,8 @@
 <template>
-  <div class="dialog" v-if="show==true" @click.stop="hideDialog">
+  <div class="dialog" v-if="show == true" @click.stop="hideDialog">
     <div @click.stop class="dialog__content">
       <slot></slot>
     </div>
-
   </div>
 </template>
 
@@ -12,21 +11,21 @@ import toggleMixin from "@/mixins/toggleMixin";
 
 export default {
   name: "ModalWindow",
-  mixins:[toggleMixin],
-}
+  mixins: [toggleMixin],
+};
 </script>
 
 <style scoped>
-.dialog{
-  top:0;
+.dialog {
+  top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0,0,0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   display: flex;
 }
-.dialog__content{
+.dialog__content {
   margin: auto;
   background: white;
   border-radius: 12px;

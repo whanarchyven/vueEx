@@ -2,7 +2,6 @@
   <div>
     <h1>О нас</h1>
     <h2 v-html="text"></h2>
-
   </div>
 </template>
 
@@ -12,28 +11,27 @@ export default {
   name: "DromAbout",
   data() {
     return {
-      image: '',
-      text: '',
-    }
+      image: "",
+      text: "",
+    };
   },
   methods: {
     async fetchPosts() {
       try {
         this.isPostLoading = true;
-        const response = await axios.get('https://demo-api.vsdev.space/api/brom/about_page');
+        const response = await axios.get(
+          "https://demo-api.vsdev.space/api/brom/about_page"
+        );
         this.text = response.data.text;
       } catch (error) {
-        alert('ERROR');
+        alert("ERROR");
       }
-
     },
   },
   beforeMount() {
     this.fetchPosts();
-  }
-}
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

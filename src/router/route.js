@@ -1,5 +1,5 @@
 // import Main from "@/pages/Main";
-import {createRouter, createWebHistory} from "vue-router"
+import { createRouter, createWebHistory } from "vue-router";
 // import PostPage from "@/pages/PostPage";
 //import About from "@/pages/About";
 // import AlonePostPage from "@/pages/AlonePostPage";
@@ -24,8 +24,7 @@ const routes = [
 
 const router = createRouter({
   routes,
-  history:createWebHistory(process.env.BASE_URL)
-})
-
+  history: createWebHistory(process.env.BASE_URL),
+});
 
 export default router;

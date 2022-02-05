@@ -11,9 +11,8 @@ components.forEach((component) => {
   app.component(component.name, component);
 });
 
-directives.forEach((directive)=>{
-  app.directive(directive.name,directive);
-})
-
+directives.forEach((directive) => {
+  app.directive(directive.name, directive);
+});
 
 app.use(router).use(store).mount("#app");
